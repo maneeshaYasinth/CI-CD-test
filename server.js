@@ -21,6 +21,11 @@ mongoose
     console.error("Error connecting to MongoDB ❌", err);
   });
 
+// ✅ CI/CD test endpoint
+app.get('/api/test', (req, res) => {
+  res.send('CI/CD pipeline working OK 🚀');
+});
+
 // ✅ GET all users
 app.get('/api/users', async (req, res) => {
   try {
